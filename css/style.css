@@ -16,4 +16,116 @@
     --white: #FFFFFF;
     --gradient1: #FFA100;
     --gradient2: #FB103D;
+/*MSD: Agrego variable para svgs si logran hacerlo de otra manera. Adelante*/
+    --svg-orange: invert(70%) sepia(100%) saturate(2545%) hue-rotate(358deg) brightness(101%) contrast(107%);
 }
+
+body{
+    background-color: var(--black);
+}
+
+/*Navbar*/
+
+nav{
+    margin: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+#logo{
+    height: 100px;
+}
+
+    /* Icons box*/
+
+.list-icons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.item-icon:first-child{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon{
+    color: var(--orange);
+    height: 30px;
+    width: 30px;
+    /* background-color: var(--orange); */
+    filter: var(--svg-orange);
+}
+
+/*Hero*/
+
+.div-hero{
+    min-height: 300px;
+    margin: 0px 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.div-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 25px;
+    /* background-color: blue; */
+}
+
+h1, h2, p, span{
+    color: var(--white);
+}
+
+h1{
+    font-size: 40px;
+}
+
+#btn__more{
+    background: rgb(255,161,0);
+background: linear-gradient(90deg, var(--gradient1) 35%, var(--gradient2) 100%);
+    font-weight: 700;
+    color: var(--white);
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 7.5px;
+}
+
+.div-images{
+    position: relative;
+    top: -150px;
+    right: 450px;
+    /* left: 0px; */
+    background-color: red;
+}
+
+.pizzahero{
+    position: absolute;
+    /* margin: 0px 150px; */
+    /* height: 300px; */
+    /* width: auto; */
+}
+
+.pizzahero-1{
+    height: 300px;
+}
+
+.pizzahero-2{
+    object-fit: cover;
+    height: 200px;
+    width: 300px;    
+    top: 10px;
+    left: 155px;
+}
+
+TODO: Hacer media queries.
