@@ -11,121 +11,164 @@
 
 :root {
     --black: #252525;
+    --black2: #131415;
     --orange: #FFA400;
     --red: #FC2933;
     --white: #FFFFFF;
     --gradient1: #FFA100;
     --gradient2: #FB103D;
-/*MSD: Agrego variable para svgs si logran hacerlo de otra manera. Adelante*/
-    --svg-orange: invert(70%) sepia(100%) saturate(2545%) hue-rotate(358deg) brightness(101%) contrast(107%);
 }
 
-body{
-    background-color: var(--black);
+html {
+    scroll-behavior: smooth;
 }
 
-/*Navbar*/
+body {
+    width: 100%;
+    background-color: var(--black2);
+}
 
-nav{
-    margin: 5px 10px;
+.section {
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
-}
-
-#logo{
-    height: 100px;
-}
-
-    /* Icons box*/
-
-.list-icons{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.item-icon:first-child{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 5px;
-}
-
-.icon{
-    color: var(--orange);
-    height: 30px;
-    width: 30px;
-    /* background-color: var(--orange); */
-    filter: var(--svg-orange);
-}
-
-/*Hero*/
-
-.div-hero{
-    min-height: 300px;
-    margin: 0px 5%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* background-color: aqua; */
-}
-
-.div-text{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: left;
-    gap: 25px;
-    /* background-color: blue; */
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
-h1, h2, p, span{
+/* HEADER */
+
+.header-container {
+    position: sticky;
+    top: 0%;
+    z-index: 9999;
+}
+
+.header {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 40px 65px;
+}
+
+.logo-container img {
+    width: 76px;
+}
+
+.navbar {
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 70px 110px;
+    color: var(--white);
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.icon {
+    filter: invert(70%) sepia(49%) saturate(2783%) hue-rotate(357deg) brightness(97%) contrast(109%);
+    cursor: pointer;
+}
+
+.home {
+    padding-right: 14.5px;
+}
+
+.cart {
+    padding-right: 54px;
+    padding-left: 68px;
+}
+
+#hero {
+    /* border: solid red; */
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 98px;    
+}
+
+.hero-text {
     color: var(--white);
 }
 
-h1{
-    font-size: 40px;
+.hero-text h1 {
+    font-weight:  700;
+    font-size: 66px;
+    line-height:  86.48px;
 }
 
-#btn__more{
-    background: rgb(255,161,0);
-background: linear-gradient(90deg, var(--gradient1) 35%, var(--gradient2) 100%);
+.hero-text h2 {
     font-weight: 700;
-    color: var(--white);
-    width: 150px;
-    height: 50px;
+    font-size: 51px;
+    line-height: 66.82px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 56px;
+}
+
+.btn {
+    background: linear-gradient(98.81deg, #FFA100 -0.82%, #FB103D 101.53%);
     border: none;
-    border-radius: 7.5px;
+    color: var(--white);
 }
 
-.div-images{
+.more-btn {
+    width: 166px;
+    height: 50px;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.hero-img {
     position: relative;
-    top: -150px;
-    right: 450px;
-    /* left: 0px; */
-    background-color: red;
+    top: 0;
+    left: 0;
+    margin-right: 91px;
 }
 
-.pizzahero{
+.pizzahero-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 265px;
+    height: 265px;
+    /* border: solid red; */
+}
+
+.pizzahero-2 {
     position: absolute;
-    /* margin: 0px 150px; */
-    /* height: 300px; */
-    /* width: auto; */
+    top: -114px;
+    left: 126px;
+    width: 392px;
+    height: 392px;
+    /* border: solid red; */
 }
 
-.pizzahero-1{
-    height: 300px;
-}
 
-.pizzahero-2{
-    object-fit: cover;
-    height: 200px;
-    width: 300px;    
-    top: 10px;
-    left: 155px;
-}
 
-TODO: Hacer media queries.
+
+
+
+
+
+
+
+
