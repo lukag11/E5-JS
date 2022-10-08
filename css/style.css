@@ -10,7 +10,9 @@
 }
 
 :root {
-    --black: #252525;
+    --black: #000000;
+    --light-black: #252525;
+    --text-grey: #696969;
     --orange: #FFA400;
     --red: #FC2933;
     --white: #FFFFFF;
@@ -82,7 +84,7 @@ nav{
     /* background-color: blue; */
 }
 
-h1, h2, p, span{
+h1, h2, h3, h4, b, p, span {
     color: var(--white);
 }
 
@@ -90,9 +92,17 @@ h1{
     font-size: 40px;
 }
 
+h3{
+    font-weight: 200;
+}
+
+h3 b{
+    font-weight: 800;
+}
+
 #btn__more{
     background: rgb(255,161,0);
-background: linear-gradient(90deg, var(--gradient1) 35%, var(--gradient2) 100%);
+    background: linear-gradient(90deg, var(--gradient1) 35%, var(--gradient2) 100%);
     font-weight: 700;
     color: var(--white);
     width: 150px;
@@ -128,4 +138,130 @@ background: linear-gradient(90deg, var(--gradient1) 35%, var(--gradient2) 100%);
     left: 155px;
 }
 
-TODO: Hacer media queries.
+/*TODO: Hacer media queries.*/
+
+/*Recommendations*/
+
+.recommendations{
+    margin: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recommendations-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recommendations-text h4 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.recommendations-desc {
+    color: var(--text-grey);
+}
+
+.recommendations-price {
+    font-weight: 600;
+    font-size: 20px;
+    color: rgb(255,161,0);
+    /* color: linear-gradient(90deg, var(--gradient1) 0%, var(--gradient2) 75%); */
+}
+
+.recommendations-item {
+    height: 150px;
+    width: 500px;
+    padding: 25px 50px;
+    /* margin: 25px 25px; */
+    background-color: var(--light-black);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.img-recommendations{
+    height: 100px;
+    width: 100px;
+}
+
+.btn__recommendations{
+
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 600;
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background: rgb(255,161,0);
+    background: linear-gradient(90deg, var(--gradient1) 0%, var(--gradient2) 75%);
+    text-decoration: none;
+}
+
+/*Categories*/
+
+.categories{
+    margin: 0px 10px;
+}
+
+.categories-list, .recommendations-list{
+    /* margin: 10px 0px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.categories-item{
+    height: 225px;
+    width: 175px;
+    margin: 25px 10px;
+    background-color: var(--light-black);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.categories-item img{
+    margin: 25px 0px;
+    height: 100px;
+    -webkit-filter: drop-shadow(1.5px 1.5px 5px rgba(255, 255, 255, 0.8));
+    filter: drop-shadow(1.5px 1.5px 5px rgba(255, 255, 255, 0.8));
+}
+
+.div-line{
+    height: 10px;
+    width: 40px;
+    background: rgb(255,161,0);
+    background: linear-gradient(90deg, var(--gradient1) 35%, var(--gradient2) 100%);
+    border-radius: 10px;
+}
+
+/*Footer*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer-list{
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#heart{
+    color: red;
+}
