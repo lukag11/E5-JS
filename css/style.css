@@ -25,7 +25,10 @@ html {
 
 body {
     width: 100%;
+    /* max-width: 1500px; */
+    margin: 0 auto;
     background-color: var(--black2);
+    /* border: solid red; */
 }
 
 .section {
@@ -78,6 +81,12 @@ body {
     line-height: 15px;
 }
 
+.nav-item:first-child {
+    display: flex;
+    align-items: center;
+    /* border: solid red; */
+}
+
 .icon {
     filter: invert(70%) sepia(49%) saturate(2783%) hue-rotate(357deg) brightness(97%) contrast(109%);
     cursor: pointer;
@@ -90,13 +99,22 @@ body {
 .cart {
     padding-right: 54px;
     padding-left: 68px;
+    opacity: 0.5;
 }
 
+.profile {
+    opacity: 0.5;
+}
+
+/* HERO */
+
 #hero {
+    width: 100%;
     /* border: solid red; */
     flex-direction: row;
+    gap: 184px;
     justify-content: space-around;
-    margin-top: 98px;    
+    margin-top: 68px;    
 }
 
 .hero-text {
@@ -135,6 +153,7 @@ body {
     font-weight: 700;
     font-size: 14px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .hero-img {
@@ -161,6 +180,229 @@ body {
     height: 392px;
     /* border: solid red; */
 }
+
+/* CARDS */
+
+#cards {
+    color: var(--white);
+    margin-top: 71px;
+    gap: 24px;
+    flex-direction: column;
+    /* border: solid red; */
+}
+
+.card-title {
+    /* border: solid yellowgreen; */
+    margin-left: 133px;
+    align-self: flex-start;
+}
+
+.card-title h2 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 38px;
+}
+
+.card {
+    width: 347px;
+    height: 103px;
+    background-color: #252525;
+    border-radius: 15px;
+    /* border: solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px;
+}
+
+.add-btn {
+    width: 85px;
+    height: 29px;
+    border-radius: 17.5px;
+    cursor: pointer;
+}
+
+.card-info {
+    /* border: solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.card-img {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+}
+
+.card-info h2 {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-info p {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.3;
+}
+
+.card-info h3 {
+    font-size: 19px;
+    font-weight: 700;
+    background: linear-gradient(98.81deg, #FFA100 -0.82%, #FF005C 101.53%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* FILTER */
+
+#filter {
+    margin-top: 84px;
+    color: var(--white);
+    flex-direction: column;
+}
+
+.filter-title {
+    margin-left: 133px;
+    align-self: flex-start;
+}
+
+.filter-title h2 {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.filter-img {
+    align-self: center;
+}
+
+.rectangle {
+    align-self: center;
+    width: 24px;
+    height: 4px;
+    background: linear-gradient(98.81deg, #FFA100 -0.82%, #FF005C 101.53%);
+}
+
+.filter-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 38px;
+    margin-top: 31px;
+}
+
+.item-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 147px;
+    height: 171px;
+    border-radius: 17px;
+    background-color: #252525;
+    /* border: solid yellow; */
+    cursor: pointer;
+}
+
+.filter-info {
+    /* border: solid yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.filter-info h3 {
+    align-self: center;
+    /* border: solid yellow; */
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.filter-img {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    /* border: solid yellow; */
+}
+
+.filterpizza-2 {
+    position: relative;
+    height: 71px;
+    width: 71px;
+    top: 0px;
+    left: 0px;
+    /* border: solid red; */
+}
+
+.filterpizza-1 {
+    position: absolute;
+    height: 71px;
+    width: 71px;
+    top: 12px;
+    left: 8px;
+    filter: blur(5px);
+}
+
+.filterburger {
+    height: 85px;
+    width: 85px;
+    padding-bottom: 11px;
+}
+
+.filterfries-2 {
+    position: relative;
+    height: 71px;
+    width: 71px;
+    top: 0px;
+    left: 0px;
+    /* border: solid red; */
+}
+
+.filterfries-1 {
+    position: absolute;
+    height: 71px;
+    width: 71px;
+    top: 12px;
+    left: 8px;
+    filter: blur(5px);
+    opacity: 0.5;
+}
+
+.filterindiv {
+    height: 86px;
+    width: 85px;    
+}
+
+.filterwrap {
+    height: 86px;
+    width: 86px;
+}
+
+.filtermex {
+    width: 85px;
+    height: 86px;
+}
+
+.filtersmoothie {
+    height: 86px;
+    width: 86px;
+}
+
+
+
+
 
 
 
