@@ -1,4 +1,6 @@
 const cards =document.querySelector('.cards-container')
+const popular =document.querySelector('.popular-container')
+
 
 const productos = [
     {
@@ -96,7 +98,7 @@ const getRandomElemets = () => {
   return rnd
 }
 
-const renderCard = producto => {
+const renderRandom = producto => {
   const { nombre, precio, info, imagen } = producto;
   return `
   <div class="card">
@@ -113,11 +115,41 @@ const renderCard = producto => {
   `
 }
 
-const renderCards = getRandomElemets => {
-  cards.innerHTML = getRandomElemets.map(renderCard).join('');
+const renderRandomCards = getRandomElemets => {
+  cards.innerHTML = getRandomElemets.map(renderRandom).join('');
 }
 
-renderCards(getRandomElemets());
+renderRandomCards(getRandomElemets());
+
+const getElements = () => {
+  let rnd = [...productos].sort(() => Math.random() > 0.5 ? 1 : -1).slice(0, 8)
+  return rnd
+}
+
+const renderCard = producto => {
+  const { nombre, precio, info, imagen } = producto;
+  return `
+  <div class="popular-card">
+   <div class="popularcard-img">
+    <img src="${imagen}" alt="${nombre}" class="popularcard-img">
+   </div>
+   <div class="popularcard-info">
+     <div class="popularcard-text">
+       <h2>${nombre}</h2>
+       <p>${info}</p>
+       <h3>$ ${precio}</h3>
+     </div>
+     <button class="btn add-btn">Agregar</button>
+    </div>
+  </div>
+  `
+}
+
+const renderCards = getElemets => {
+  popular.innerHTML = getElemets.map(renderCard).join('');
+}
+
+renderCards(getElements())
 
 const init = () => {
   saveLocalStorage(productos)

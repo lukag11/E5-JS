@@ -7,29 +7,65 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>NucbaZappi</title>
     <link rel="shortcut icon" href="./assets/PizzaIcon.ico" type="image/x-icon">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" 
-  rel="stylesheet"  type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-    <main>
-        <div class="section-container header-container">
-            <header class="header">
-                <div class="logo-container">
-                    <a href="./index.html">
-                        <img src="./assets/PizzaLogo.png" alt="NucbaZappi" class="logo">
-                    </a>
+    <div class="header-container">
+        <header class="header">
+            <div class="logo-container">
+                <a href="./index.html">
+                    <img src="./assets/PizzaLogo.png" alt="NucbaZappi" class="logo">
+                </a>
+            </div>
+            <nav class="navbar">
+                <div class="icons-box">
+                    <ul class="navbar-list">
+                        <li class="nav-item nav-link"><img src="./assets/home.svg" class="icon home"><span>Home</span></li>
+                        <li class="nav-item nav-link"><img src="./assets/cart.svg" class="icon cart"></li>
+                        <li class="nav-item nav-link"><img src="./assets/profile.svg" class="icon profile"></li>
+                    </ul>
                 </div>
-                <nav class="navbar">
-                    <div class="icons-box">
-                        <ul class="navbar-list">
-                            <li class="nav-item nav-link"><img src="./assets/home.svg" class="icon home"><span>Home</span></li>
-                            <li class="nav-item nav-link"><img src="./assets/cart.svg" class="icon cart"></li>
-                            <li class="nav-item nav-link"><img src="./assets/profile.svg" class="icon profile"></li>
-                        </ul>
+                <div class="cart-window">
+                    <div class="cart-box">
+                        <button class="close-btn">X</button>
+                        <h2>Tus Productos</h2>
+                        <div class="cart-item">
+                            <div class="cart-img">
+                             <img src="./assets/Bennazianna.png" alt="${nombre}">
+                            </div>
+                            <div class="cart-info">
+                             <h2>Pepito</h2>
+                             <p>Hola</p>
+                             <h3>$ 100</h3>
+                            </div>
+                            <div class="cart-quantity">
+                                <button class="minus-btn"><i class="fa-solid fa-minus"></i></button>
+                                <h2>1</h2>
+                                <button class="plus-btn"><i class="fa-sharp fa-solid fa-plus"></i></button>
+                            </div>
+                           </div>
+                           <div class="cart-price">
+                               <div class="subtotal">
+                                <p>Sutbotal:</p>
+                                <p>$4.890</p>
+                               </div>
+                               <div class="envio">
+                                <p>Envío:</p>
+                                <p>Gratis</p>
+                               </div>
+                               <div class="total">
+                                <h3>Total:</h3>
+                                <h3>$4.890</h3>
+                               </div>
+                           </div>
+                        <button class="btn buy-btn">Comprar</button>
+                        <small>Ver más productos</small>
                     </div>
-                </nav>        
-            </header>
-        </div>
+                </div>
+            </nav>        
+        </header>
+    </div>
+    <main>
         <div class="section-container">
             <section class="section" id="hero">
                 <div class="hero-text">
@@ -128,6 +164,22 @@
                 </div>
             </section>
         </div>
+        <div class="section-container">
+            <section class="section" id="popular">
+                <div class="popular-title">
+                    <h2>Los más populares</h2>
+                </div>
+                    <div class="popular-container"></div>
+            </section>
+        </div>
+        <footer>
+            <ul class="footer-list">
+                <li class="footer-item">Terminos de Uso</li>
+                <li class="footer-item">Trabaja con Nosotros</li>
+                <li class="footer-item">Soporte</li>
+            </ul>
+            <h3>Hecho con <span id="heart">❤</span> en <b>NUCBAZAPPI</b></h3>
+        </footer>
     </main>
     <script src="./js/main.js"></script>
 </body>
