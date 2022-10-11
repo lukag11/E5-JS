@@ -88,12 +88,14 @@ const saveLocalStorage = productos => {
   localStorage.setItem('productos', JSON.stringify(productos));
 };
 
-const randomItem = () => {
-  let random = productos.sort(() => .5 - Math.random()*productos.length);
-  return random
-}
+// Cual es el sentido de esto??
 
-const getRandomElemets = () => {
+// const randomItem = () => {
+//   let random = productos.sort(() => .5 - Math.random()*productos.length);
+//   return random
+// }
+
+const getRandomElements = () => {
   let rnd = [...productos].sort(() => Math.random() > 0.5 ? 1 : -1).slice(0, 3)
   return rnd
 }
@@ -114,12 +116,6 @@ const renderRandom = producto => {
   </div>
   `
 }
-
-const renderRandomCards = getRandomElemets => {
-  cards.innerHTML = getRandomElemets.map(renderRandom).join('');
-}
-
-renderRandomCards(getRandomElemets());
 
 const getElements = () => {
   let rnd = [...productos].sort(() => Math.random() > 0.5 ? 1 : -1).slice(0, 8)
@@ -145,11 +141,12 @@ const renderCard = producto => {
   `
 }
 
-const renderCards = getElemets => {
-  popular.innerHTML = getElemets.map(renderCard).join('');
+const renderCards = (array, container, f) => {
+  container.innerHTML = array.map(f).join('');
 }
 
-renderCards(getElements())
+renderCards(getRandomElements(), cards, renderRandom);
+renderCards(getElements(), popular, renderCard);
 
 const init = () => {
   saveLocalStorage(productos)
