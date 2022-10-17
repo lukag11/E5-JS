@@ -399,7 +399,7 @@ body {
 
 .card-title {
     /* border: solid yellowgreen; */
-    margin-left: 133px;
+    margin-left: 500px;
     align-self: flex-start;
 }
 
@@ -479,7 +479,7 @@ body {
 }
 
 .filter-title {
-    margin-left: 133px;
+    margin-left: 500px;
     align-self: flex-start;
 }
 
@@ -520,7 +520,7 @@ body {
     background-color: #252525;
     /* border: solid yellow; */
     cursor: pointer;
-    margin: auto;
+    margin: auto;    
 }
 
 .filter-info {
@@ -606,7 +606,7 @@ body {
 
 .popular-title {
     /* border: solid yellowgreen; */
-    margin-left: 133px;
+    margin-left: 500px;
     align-self: flex-start;
 }
 
@@ -622,7 +622,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 40px;
-    margin: 0 200px;
+    margin: 0 500px;
 }
 
 .popular-card {
@@ -658,6 +658,7 @@ body {
 .popularcard-text {
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .popularcard-img {

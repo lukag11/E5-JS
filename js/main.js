@@ -89,6 +89,38 @@ const productos = [
     imagen: './assets/NickGi.png',
     category: "pizza"
   },
+  {
+    id: 12,
+    nombre: "Calle 13",
+    precio: 205,
+    info: "Atrévete-Te-Te",
+    imagen: './assets/Calle13.png',
+    category: "mex"
+  },
+  {
+    id: 13,
+    nombre: "Txdx Violeta",
+    precio: 217,
+    info: "Viendo todo violeta",
+    imagen: './assets/txdxvioleta.png',
+    category: "smoothies"
+  },
+  {
+    id: 14,
+    nombre: "La Burga King",
+    precio: 420,
+    info: "Me fui mundial",
+    imagen: './assets/Burga.png',
+    category: "burger"
+  },
+  {
+    id: 15,
+    nombre: "Wrap'd",
+    precio: 300,
+    info: "Enrolate uno",
+    imagen: '../assets/wraped.png',
+    category: "wraps"
+  },
 ];
 
 // Quise pasar el objeto a otro file (sin exito). Alguien se anima?
